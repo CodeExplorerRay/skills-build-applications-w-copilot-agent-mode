@@ -81,11 +81,6 @@ DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "octofit_db",
-        "ENFORCE_SCHEMA": False,
-        "CLIENT": {
-            "host": "localhost",
-            "port": 27017,
-        },
     }
 }
 
@@ -137,3 +132,22 @@ CORS_ALLOW_METHODS = ["*"]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Rest Framework Settings
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ],
+}
+
+# MongoDB specific settings
+MONGODB_ENFORCE_SCHEMA = False
+MONGODB_CONNECT = True
+MONGODB_NAME = "octofit_db"
+
+# Djongo specific settings
+DJONGO_MANAGE_MODELS = True

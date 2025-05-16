@@ -1,0 +1,37 @@
+2025-05-16 17:19:47,681 - DEBUG - Starting data population...
+2025-05-16 17:19:47,685 - DEBUG - Cleared users collection
+2025-05-16 17:19:47,686 - DEBUG - Cleared teams collection
+2025-05-16 17:19:47,687 - DEBUG - Cleared activity collection
+2025-05-16 17:19:47,687 - DEBUG - Cleared leaderboard collection
+2025-05-16 17:19:47,688 - DEBUG - Cleared workouts collection
+2025-05-16 17:19:47,690 - DEBUG - New MongoClient connection
+2025-05-16 17:19:47,692 - DEBUG - New Database connection
+2025-05-16 17:19:47,692 - DEBUG - sql_command: INSERT INTO "octofit_tracker_user" ("email", "name", "password") VALUES (%(0)s, %(1)s, %(2)s)
+params: ['alice@example.com', 'Alice Smith', 'password123']
+2025-05-16 17:19:47,696 - ERROR - Error during data population: 
+2025-05-16 17:19:47,697 - DEBUG - MongoClient connection closed
+2025-05-16 17:24:08,683 - DEBUG - Starting data population...
+2025-05-16 17:24:08,687 - DEBUG - Cleared users collection
+2025-05-16 17:24:08,687 - DEBUG - Cleared teams collection
+2025-05-16 17:24:08,688 - DEBUG - Cleared activity collection
+2025-05-16 17:24:08,688 - DEBUG - Cleared leaderboard collection
+2025-05-16 17:24:08,688 - DEBUG - Cleared workouts collection
+2025-05-16 17:24:08,690 - DEBUG - New MongoClient connection
+2025-05-16 17:24:08,692 - DEBUG - New Database connection
+2025-05-16 17:24:08,692 - DEBUG - sql_command: INSERT INTO "octofit_tracker_user" ("email", "name", "password") VALUES (%(0)s, %(1)s, %(2)s)
+params: ['alice@example.com', 'Alice Smith', 'password123']
+2025-05-16 17:24:08,697 - ERROR - Error during data population: 
+2025-05-16 17:24:08,698 - DEBUG - MongoClient connection closed
+2025-05-16 17:24:57,243 - DEBUG - Starting data population...
+2025-05-16 17:24:57,246 - DEBUG - Connected to database: octofit_db
+2025-05-16 17:24:57,248 - DEBUG - Cleared collection: users
+2025-05-16 17:24:57,249 - DEBUG - Cleared collection: teams
+2025-05-16 17:24:57,250 - DEBUG - Cleared collection: activity
+2025-05-16 17:24:57,251 - DEBUG - Cleared collection: leaderboard
+2025-05-16 17:24:57,251 - DEBUG - Cleared collection: workouts
+2025-05-16 17:24:57,253 - DEBUG - New MongoClient connection
+2025-05-16 17:24:57,256 - DEBUG - New Database connection
+2025-05-16 17:24:57,257 - DEBUG - sql_command: INSERT INTO "octofit_tracker_user" ("email", "name", "password") VALUES (%(0)s, %(1)s, %(2)s)
+params: ['alice@example.com', 'Alice Smith', 'password123']
+2025-05-16 17:24:57,263 - ERROR - Error during data population: 
+2025-05-16 17:24:57,263 - DEBUG - MongoClient connection closed
