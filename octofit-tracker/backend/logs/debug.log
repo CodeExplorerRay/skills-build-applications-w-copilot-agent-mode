@@ -35,3 +35,15 @@ params: ['alice@example.com', 'Alice Smith', 'password123']
 params: ['alice@example.com', 'Alice Smith', 'password123']
 2025-05-16 17:24:57,263 - ERROR - Error during data population: 
 2025-05-16 17:24:57,263 - DEBUG - MongoClient connection closed
+2025-05-16 17:26:05,006 - DEBUG - Starting data population...
+2025-05-16 17:26:05,008 - DEBUG - Connected to database: octofit_db
+2025-05-16 17:26:05,009 - DEBUG - Cleared collection: users
+2025-05-16 17:26:05,010 - DEBUG - Cleared collection: teams
+2025-05-16 17:26:05,010 - DEBUG - Cleared collection: activity
+2025-05-16 17:26:05,011 - DEBUG - Cleared collection: leaderboard
+2025-05-16 17:26:05,011 - DEBUG - Cleared collection: workouts
+2025-05-16 17:26:05,012 - DEBUG - Inserted test users directly into MongoDB.
+2025-05-16 17:26:05,012 - DEBUG - Inserted test teams directly into MongoDB.
+2025-05-16 17:26:05,013 - DEBUG - Inserted test activities directly into MongoDB.
+2025-05-16 17:26:05,013 - DEBUG - Inserted test workouts directly into MongoDB.
+2025-05-16 17:26:05,014 - DEBUG - Inserted leaderboard entries directly into MongoDB.

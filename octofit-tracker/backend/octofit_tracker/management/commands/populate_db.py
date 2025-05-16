@@ -39,76 +39,39 @@ class Command(BaseCommand):
                     logging.error(f'Error clearing collection {collection}: {e}')
 
             # Create test users
-            user1 = User.objects.create(
-                email='alice@example.com',
-                name='Alice Smith',
-                password='password123'
-            )
-            
-            user2 = User.objects.create(
-                email='bob@example.com',
-                name='Bob Johnson',
-                password='password123'
-            )
-            logging.debug(f'Created users: {user1}, {user2}')
-
-            # Log user creation
-            logging.debug(f'Creating user: {user1.email}')
-            logging.debug(f'Creating user: {user2.email}')
+            db['users'].insert_many([
+                {"email": "alice@example.com", "name": "Alice Smith", "password": "password123"},
+                {"email": "bob@example.com", "name": "Bob Johnson", "password": "password123"}
+            ])
+            logging.debug('Inserted test users directly into MongoDB.')
 
             # Create test teams
-            team1 = Team.objects.create(name='Speed Demons')
-            team1.members.add(user1)
-            
-            team2 = Team.objects.create(name='Power Lifters')
-            team2.members.add(user2)
-            logging.debug(f'Created teams: {team1}, {team2}')
-
-            # Log team creation
-            logging.debug(f'Creating team: {team1.name}')
-            logging.debug(f'Creating team: {team2.name}')
+            db['teams'].insert_many([
+                {"name": "Speed Demons", "members": ["alice@example.com"]},
+                {"name": "Power Lifters", "members": ["bob@example.com"]}
+            ])
+            logging.debug('Inserted test teams directly into MongoDB.')
 
             # Create test activities
-            Activity.objects.create(
-                user=user1,
-                activity_type='running',
-                duration=30,
-                date=timezone.now()
-            )
-            
-            Activity.objects.create(
-                user=user2,
-                activity_type='weightlifting',
-                duration=45,
-                date=timezone.now()
-            )
-            logging.debug('Created activities.')
-
-            # Log activity creation
-            logging.debug('Creating activities...')
+            db['activity'].insert_many([
+                {"user": "alice@example.com", "activity_type": "running", "duration": 30, "date": timezone.now().isoformat()},
+                {"user": "bob@example.com", "activity_type": "weightlifting", "duration": 45, "date": timezone.now().isoformat()}
+            ])
+            logging.debug('Inserted test activities directly into MongoDB.')
 
             # Create test workouts
-            Workout.objects.create(
-                name='Morning Run',
-                description='5km run at moderate pace'
-            )
-            
-            Workout.objects.create(
-                name='Strength Training',
-                description='Full body workout with weights'
-            )
-            logging.debug('Created workouts.')
-
-            # Log workout creation
-            logging.debug('Creating workouts...')
+            db['workouts'].insert_many([
+                {"name": "Morning Run", "description": "5km run at moderate pace"},
+                {"name": "Strength Training", "description": "Full body workout with weights"}
+            ])
+            logging.debug('Inserted test workouts directly into MongoDB.')
 
             # Create leaderboard entries
-            Leaderboard.objects.create(team=team1, points=100)
-            Leaderboard.objects.create(team=team2, points=85)
-            logging.debug('Created leaderboard entries.')
-
-            # Log leaderboard entries
-            logging.debug('Creating leaderboard entries...')
+            db['leaderboard'].insert_many([
+                {"team": "Speed Demons", "points": 100},
+                {"team": "Power Lifters", "points": 85}
+            ])
+            logging.debug('Inserted leaderboard entries directly into MongoDB.')
 
             self.stdout.write(self.style.SUCCESS('Successfully populated all test data'))
         except Exception as e:
