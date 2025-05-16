@@ -1,0 +1,103 @@
+2025-05-16 18:29:45,850 - DEBUG - Looking for locale `en_US` in provider `faker.providers.address`.
+2025-05-16 18:29:45,852 - DEBUG - Provider `faker.providers.address` has been localized to `en_US`.
+2025-05-16 18:29:45,853 - DEBUG - Looking for locale `en_US` in provider `faker.providers.automotive`.
+2025-05-16 18:29:45,855 - DEBUG - Provider `faker.providers.automotive` has been localized to `en_US`.
+2025-05-16 18:29:45,855 - DEBUG - Looking for locale `en_US` in provider `faker.providers.bank`.
+2025-05-16 18:29:45,857 - DEBUG - Specified locale `en_US` is not available for provider `faker.providers.bank`. Locale reset to `en_GB` for this provider.
+2025-05-16 18:29:45,857 - DEBUG - Looking for locale `en_US` in provider `faker.providers.barcode`.
+2025-05-16 18:29:45,857 - DEBUG - Provider `faker.providers.barcode` has been localized to `en_US`.
+2025-05-16 18:29:45,859 - DEBUG - Looking for locale `en_US` in provider `faker.providers.color`.
+2025-05-16 18:29:45,860 - DEBUG - Provider `faker.providers.color` has been localized to `en_US`.
+2025-05-16 18:29:45,860 - DEBUG - Looking for locale `en_US` in provider `faker.providers.company`.
+2025-05-16 18:29:45,862 - DEBUG - Provider `faker.providers.company` has been localized to `en_US`.
+2025-05-16 18:29:45,862 - DEBUG - Looking for locale `en_US` in provider `faker.providers.credit_card`.
+2025-05-16 18:29:45,863 - DEBUG - Provider `faker.providers.credit_card` has been localized to `en_US`.
+2025-05-16 18:29:45,863 - DEBUG - Looking for locale `en_US` in provider `faker.providers.currency`.
+2025-05-16 18:29:45,864 - DEBUG - Provider `faker.providers.currency` has been localized to `en_US`.
+2025-05-16 18:29:45,865 - DEBUG - Looking for locale `en_US` in provider `faker.providers.date_time`.
+2025-05-16 18:29:45,867 - DEBUG - Provider `faker.providers.date_time` has been localized to `en_US`.
+2025-05-16 18:29:45,867 - DEBUG - Provider `faker.providers.doi` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,867 - DEBUG - Provider `faker.providers.emoji` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,868 - DEBUG - Provider `faker.providers.file` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,868 - DEBUG - Looking for locale `en_US` in provider `faker.providers.geo`.
+2025-05-16 18:29:45,868 - DEBUG - Provider `faker.providers.geo` has been localized to `en_US`.
+2025-05-16 18:29:45,869 - DEBUG - Looking for locale `en_US` in provider `faker.providers.internet`.
+2025-05-16 18:29:45,870 - DEBUG - Provider `faker.providers.internet` has been localized to `en_US`.
+2025-05-16 18:29:45,871 - DEBUG - Looking for locale `en_US` in provider `faker.providers.isbn`.
+2025-05-16 18:29:45,871 - DEBUG - Provider `faker.providers.isbn` has been localized to `en_US`.
+2025-05-16 18:29:45,871 - DEBUG - Looking for locale `en_US` in provider `faker.providers.job`.
+2025-05-16 18:29:45,873 - DEBUG - Provider `faker.providers.job` has been localized to `en_US`.
+2025-05-16 18:29:45,873 - DEBUG - Looking for locale `en_US` in provider `faker.providers.lorem`.
+2025-05-16 18:29:45,875 - DEBUG - Provider `faker.providers.lorem` has been localized to `en_US`.
+2025-05-16 18:29:45,875 - DEBUG - Looking for locale `en_US` in provider `faker.providers.misc`.
+2025-05-16 18:29:45,876 - DEBUG - Provider `faker.providers.misc` has been localized to `en_US`.
+2025-05-16 18:29:45,876 - DEBUG - Looking for locale `en_US` in provider `faker.providers.passport`.
+2025-05-16 18:29:45,876 - DEBUG - Provider `faker.providers.passport` has been localized to `en_US`.
+2025-05-16 18:29:45,877 - DEBUG - Looking for locale `en_US` in provider `faker.providers.person`.
+2025-05-16 18:29:45,880 - DEBUG - Provider `faker.providers.person` has been localized to `en_US`.
+2025-05-16 18:29:45,882 - DEBUG - Looking for locale `en_US` in provider `faker.providers.phone_number`.
+2025-05-16 18:29:45,884 - DEBUG - Provider `faker.providers.phone_number` has been localized to `en_US`.
+2025-05-16 18:29:45,884 - DEBUG - Provider `faker.providers.profile` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,884 - DEBUG - Provider `faker.providers.python` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,885 - DEBUG - Provider `faker.providers.sbn` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:45,885 - DEBUG - Looking for locale `en_US` in provider `faker.providers.ssn`.
+2025-05-16 18:29:45,887 - DEBUG - Provider `faker.providers.ssn` has been localized to `en_US`.
+2025-05-16 18:29:45,887 - DEBUG - Provider `faker.providers.user_agent` does not feature localization. Specified locale `en_US` is not utilized for this provider.
+2025-05-16 18:29:46,054 - DEBUG - New MongoClient connection
+2025-05-16 18:29:46,057 - DEBUG - New Database connection
+2025-05-16 18:29:46,059 - DEBUG - sql_command: DELETE FROM "octofit_tracker_leaderboard"
+params: ()
+2025-05-16 18:29:46,063 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,064 - DEBUG - sql_command: DELETE FROM "octofit_tracker_activity"
+params: ()
+2025-05-16 18:29:46,064 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,065 - DEBUG - sql_command: DELETE FROM "octofit_tracker_workout"
+params: ()
+2025-05-16 18:29:46,066 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,066 - DEBUG - sql_command: SELECT "octofit_tracker_team"."id", "octofit_tracker_team"."name" FROM "octofit_tracker_team"
+params: ()
+2025-05-16 18:29:46,067 - DEBUG - Find query: {'projection': ['id', 'name']}
+2025-05-16 18:29:46,067 - DEBUG - Result: (5, 'Speed Demons')
+2025-05-16 18:29:46,068 - DEBUG - Result: (6, 'Power Lifters')
+2025-05-16 18:29:46,069 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team_members" WHERE "octofit_tracker_team_members"."team_id" IN (%(0)s, %(1)s)
+params: (5, 6)
+2025-05-16 18:29:46,070 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,070 - DEBUG - sql_command: DELETE FROM "octofit_tracker_leaderboard" WHERE "octofit_tracker_leaderboard"."team_id" IN (%(0)s, %(1)s)
+params: (5, 6)
+2025-05-16 18:29:46,072 - DEBUG - delete_many: 0
+2025-05-16 18:29:46,072 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team" WHERE "octofit_tracker_team"."id" IN (%(0)s, %(1)s)
+params: (6, 5)
+2025-05-16 18:29:46,073 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,074 - DEBUG - sql_command: SELECT "octofit_tracker_user"."id", "octofit_tracker_user"."email", "octofit_tracker_user"."name", "octofit_tracker_user"."password" FROM "octofit_tracker_user"
+params: ()
+2025-05-16 18:29:46,075 - DEBUG - Find query: {'projection': ['id', 'email', 'name', 'password']}
+2025-05-16 18:29:46,075 - DEBUG - Result: (9, 'alice@example.com', 'Alice Smith', 'password123')
+2025-05-16 18:29:46,076 - DEBUG - Result: (10, 'bob@example.com', 'Bob Johnson', 'password123')
+2025-05-16 18:29:46,077 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team_members" WHERE "octofit_tracker_team_members"."user_id" IN (%(0)s, %(1)s)
+params: (9, 10)
+2025-05-16 18:29:46,078 - DEBUG - delete_many: 0
+2025-05-16 18:29:46,078 - DEBUG - sql_command: DELETE FROM "octofit_tracker_activity" WHERE "octofit_tracker_activity"."user_id" IN (%(0)s, %(1)s)
+params: (9, 10)
+2025-05-16 18:29:46,079 - DEBUG - delete_many: 0
+2025-05-16 18:29:46,080 - DEBUG - sql_command: DELETE FROM "octofit_tracker_user" WHERE "octofit_tracker_user"."id" IN (%(0)s, %(1)s)
+params: (10, 9)
+2025-05-16 18:29:46,081 - DEBUG - delete_many: 2
+2025-05-16 18:29:46,081 - INFO - Cleared all existing data
+2025-05-16 18:29:46,195 - ERROR - Data population failed
+Traceback (most recent call last):
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/octofit_tracker/management/commands/populate_db.py", line 32, in handle
+    users = self._create_users(5)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/octofit_tracker/management/commands/populate_db.py", line 55, in _create_users
+    user = User.objects.create(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/django/db/models/query.py", line 669, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/django/db/models/base.py", line 585, in __init__
+    raise TypeError(
+TypeError: User() got unexpected keyword arguments: 'last_login', 'is_active'
+2025-05-16 18:29:46,197 - DEBUG - MongoClient connection closed
