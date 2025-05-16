@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
-from django.utils import timezone
-from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
+from datetime import datetime
 import pymongo
 import logging
 
@@ -54,8 +53,8 @@ class Command(BaseCommand):
 
             # Create test activities
             db['activity'].insert_many([
-                {"user": "alice@example.com", "activity_type": "running", "duration": 30, "date": timezone.now().isoformat()},
-                {"user": "bob@example.com", "activity_type": "weightlifting", "duration": 45, "date": timezone.now().isoformat()}
+                {"user": "alice@example.com", "activity_type": "running", "duration": 30, "date": datetime.utcnow().isoformat()},
+                {"user": "bob@example.com", "activity_type": "weightlifting", "duration": 45, "date": datetime.utcnow().isoformat()}
             ])
             logging.debug('Inserted test activities directly into MongoDB.')
 
