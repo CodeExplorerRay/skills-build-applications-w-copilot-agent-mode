@@ -82,10 +82,8 @@ DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "octofit_db",
-        "ENFORCE_SCHEMA": False,
         "CLIENT": {
-            "host": "localhost",
-            "port": 27017,
+            "host": "mongodb://localhost:27017/",
         },
     }
 }
@@ -151,9 +149,32 @@ REST_FRAMEWORK = {
 }
 
 # MongoDB specific settings
-MONGODB_ENFORCE_SCHEMA = False
-MONGODB_CONNECT = True
-MONGODB_NAME = "octofit_db"
+MONGODB_HOST = 'localhost'
+MONGODB_PORT = 27017
+MONGODB_NAME = 'octofit_db'
+MONGODB_USERNAME = ''
+MONGODB_PASSWORD = ''
 
 # Djongo specific settings
 DJONGO_MANAGE_MODELS = True
+DJONGO_LOGGER = {
+    'handlers': ['console'],
+    'level': 'DEBUG',
+}
+
+# Add logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'djongo': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
