@@ -1,9 +1,26 @@
-use octofit_db
+const { MongoClient } = require('mongodb');
 
-db.createCollection("users")
-db.createCollection("teams")
-db.createCollection("activity")
-db.createCollection("leaderboard")
-db.createCollection("workouts")
+async function initDb() {
+	const uri = 'mongodb://localhost:27017';
+	const client = new MongoClient(uri);
 
-db.users.createIndex({ "email": 1 }, { unique: true })
+	try {
+		await client.connect();
+		const db = client.db('octofit_db');
+
+		await db.createCollection("users");
+		await db.createCollection("teams");
+		await db.createCollection("activity");
+		await db.createCollection("leaderboard");
+		await db.createCollection("workouts");
+
+		await db.collection("users").createIndex({ "email": 1 }, { unique: true });
+		console.log("Database initialized successfully.");
+	} catch (err) {
+		console.error("Error initializing database:", err);
+	} finally {
+		await client.close();
+	}
+}
+
+initDb();
