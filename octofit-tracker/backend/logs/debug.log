@@ -142,3 +142,86 @@ params: [4, 85]
 2025-05-16 18:09:13,611 - DEBUG - inserted ids [ObjectId('68277f497c969bd28405dbf1')]
 2025-05-16 18:09:13,611 - DEBUG - Created leaderboard entries
 2025-05-16 18:09:13,613 - DEBUG - MongoClient connection closed
+2025-05-16 18:15:14,534 - DEBUG - Starting data population...
+2025-05-16 18:15:14,535 - DEBUG - New MongoClient connection
+2025-05-16 18:15:14,537 - DEBUG - New Database connection
+2025-05-16 18:15:14,538 - DEBUG - sql_command: DELETE FROM "octofit_tracker_leaderboard"
+params: ()
+2025-05-16 18:15:14,542 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,542 - DEBUG - sql_command: DELETE FROM "octofit_tracker_activity"
+params: ()
+2025-05-16 18:15:14,543 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,544 - DEBUG - sql_command: SELECT "octofit_tracker_team"."id", "octofit_tracker_team"."name" FROM "octofit_tracker_team"
+params: ()
+2025-05-16 18:15:14,545 - DEBUG - Find query: {'projection': ['id', 'name']}
+2025-05-16 18:15:14,545 - DEBUG - Result: (3, 'Speed Demons')
+2025-05-16 18:15:14,546 - DEBUG - Result: (4, 'Power Lifters')
+2025-05-16 18:15:14,547 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team_members" WHERE "octofit_tracker_team_members"."team_id" IN (%(0)s, %(1)s)
+params: (3, 4)
+2025-05-16 18:15:14,549 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,549 - DEBUG - sql_command: DELETE FROM "octofit_tracker_leaderboard" WHERE "octofit_tracker_leaderboard"."team_id" IN (%(0)s, %(1)s)
+params: (3, 4)
+2025-05-16 18:15:14,551 - DEBUG - delete_many: 0
+2025-05-16 18:15:14,551 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team" WHERE "octofit_tracker_team"."id" IN (%(0)s, %(1)s)
+params: (4, 3)
+2025-05-16 18:15:14,552 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,553 - DEBUG - sql_command: SELECT "octofit_tracker_user"."id", "octofit_tracker_user"."email", "octofit_tracker_user"."name", "octofit_tracker_user"."password" FROM "octofit_tracker_user"
+params: ()
+2025-05-16 18:15:14,554 - DEBUG - Find query: {'projection': ['id', 'email', 'name', 'password']}
+2025-05-16 18:15:14,556 - DEBUG - Result: (7, 'alice@example.com', 'Alice Smith', 'password123')
+2025-05-16 18:15:14,556 - DEBUG - Result: (8, 'bob@example.com', 'Bob Johnson', 'password123')
+2025-05-16 18:15:14,557 - DEBUG - sql_command: DELETE FROM "octofit_tracker_team_members" WHERE "octofit_tracker_team_members"."user_id" IN (%(0)s, %(1)s)
+params: (7, 8)
+2025-05-16 18:15:14,558 - DEBUG - delete_many: 0
+2025-05-16 18:15:14,559 - DEBUG - sql_command: DELETE FROM "octofit_tracker_activity" WHERE "octofit_tracker_activity"."user_id" IN (%(0)s, %(1)s)
+params: (7, 8)
+2025-05-16 18:15:14,561 - DEBUG - delete_many: 0
+2025-05-16 18:15:14,561 - DEBUG - sql_command: DELETE FROM "octofit_tracker_user" WHERE "octofit_tracker_user"."id" IN (%(0)s, %(1)s)
+params: (8, 7)
+2025-05-16 18:15:14,562 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,563 - DEBUG - sql_command: DELETE FROM "octofit_tracker_workout"
+params: ()
+2025-05-16 18:15:14,563 - DEBUG - delete_many: 2
+2025-05-16 18:15:14,564 - DEBUG - Cleared all collections
+2025-05-16 18:15:14,564 - DEBUG - sql_command: INSERT INTO "octofit_tracker_user" ("email", "name", "password") VALUES (%(0)s, %(1)s, %(2)s)
+params: ['alice@example.com', 'Alice Smith', 'password123']
+2025-05-16 18:15:14,567 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb26')]
+2025-05-16 18:15:14,567 - DEBUG - sql_command: INSERT INTO "octofit_tracker_user" ("email", "name", "password") VALUES (%(0)s, %(1)s, %(2)s)
+params: ['bob@example.com', 'Bob Johnson', 'password123']
+2025-05-16 18:15:14,569 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb27')]
+2025-05-16 18:15:14,569 - DEBUG - Created test users
+2025-05-16 18:15:14,569 - DEBUG - sql_command: INSERT INTO "octofit_tracker_team" ("name") VALUES (%(0)s)
+params: ['Speed Demons']
+2025-05-16 18:15:14,571 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb28')]
+2025-05-16 18:15:14,571 - DEBUG - sql_command: INSERT INTO "octofit_tracker_team" ("name") VALUES (%(0)s)
+params: ['Power Lifters']
+2025-05-16 18:15:14,572 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb29')]
+2025-05-16 18:15:14,573 - DEBUG - sql_command: INSERT INTO "octofit_tracker_team_members" ("team_id", "user_id") VALUES (%(0)s, %(1)s)
+params: (5, 9)
+2025-05-16 18:15:14,575 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2a')]
+2025-05-16 18:15:14,575 - DEBUG - sql_command: INSERT INTO "octofit_tracker_team_members" ("team_id", "user_id") VALUES (%(0)s, %(1)s)
+params: (6, 10)
+2025-05-16 18:15:14,577 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2b')]
+2025-05-16 18:15:14,577 - DEBUG - Created test teams
+2025-05-16 18:15:14,577 - DEBUG - sql_command: INSERT INTO "octofit_tracker_activity" ("user_id", "activity_type", "duration", "date") VALUES (%(0)s, %(1)s, %(2)s, %(3)s)
+params: [9, 'running', 30, datetime.datetime(2025, 5, 16, 18, 15, 14, 577491)]
+2025-05-16 18:15:14,579 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2c')]
+2025-05-16 18:15:14,579 - DEBUG - sql_command: INSERT INTO "octofit_tracker_activity" ("user_id", "activity_type", "duration", "date") VALUES (%(0)s, %(1)s, %(2)s, %(3)s)
+params: [10, 'weightlifting', 45, datetime.datetime(2025, 5, 16, 18, 15, 14, 579816)]
+2025-05-16 18:15:14,582 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2d')]
+2025-05-16 18:15:14,582 - DEBUG - Created test activities
+2025-05-16 18:15:14,582 - DEBUG - sql_command: INSERT INTO "octofit_tracker_workout" ("name", "description") VALUES (%(0)s, %(1)s)
+params: ['Morning Run', '5km run at moderate pace']
+2025-05-16 18:15:14,584 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2e')]
+2025-05-16 18:15:14,584 - DEBUG - sql_command: INSERT INTO "octofit_tracker_workout" ("name", "description") VALUES (%(0)s, %(1)s)
+params: ['Strength Training', 'Full body workout with weights']
+2025-05-16 18:15:14,586 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb2f')]
+2025-05-16 18:15:14,586 - DEBUG - Created test workouts
+2025-05-16 18:15:14,587 - DEBUG - sql_command: INSERT INTO "octofit_tracker_leaderboard" ("team_id", "points") VALUES (%(0)s, %(1)s)
+params: [5, 100]
+2025-05-16 18:15:14,588 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb30')]
+2025-05-16 18:15:14,589 - DEBUG - sql_command: INSERT INTO "octofit_tracker_leaderboard" ("team_id", "points") VALUES (%(0)s, %(1)s)
+params: [6, 85]
+2025-05-16 18:15:14,591 - DEBUG - inserted ids [ObjectId('682780b2c4398cefeaa1cb31')]
+2025-05-16 18:15:14,591 - DEBUG - Created leaderboard entries
+2025-05-16 18:15:14,592 - DEBUG - MongoClient connection closed
