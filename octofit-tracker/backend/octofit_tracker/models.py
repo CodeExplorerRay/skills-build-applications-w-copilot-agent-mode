@@ -11,7 +11,7 @@ class User(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=100)
-    members = models.ArrayReferenceField(to=User, on_delete=models.CASCADE)
+    members = models.ManyToManyField(User, related_name='teams')
     # Add additional fields as needed
 
     def __str__(self):
